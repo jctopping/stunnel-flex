@@ -1,5 +1,5 @@
 FROM alpine:3.18 AS builder
-ARG STUNNEL_VERSION=5.72
+ARG STUNNEL_VERSION=5.74
 
 RUN apk add --no-cache build-base linux-headers openssl-dev openssl-libs-static wget tar
 
