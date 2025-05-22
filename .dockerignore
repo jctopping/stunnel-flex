@@ -1,0 +1,20 @@
+# Ignore local build artifacts
+dist/
+*.pem
+*.sha1
+*.tar.gz
+
+# Git metadata
+.git/
+.gitignore
+
+# CI config
+.github/
+
+# Editor and OS files
+*.swp
+*.bak
+*.tmp
+*.log
+.DS_Store
+.vscode/

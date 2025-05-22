@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  stunnel:
+    container_name: stunnel-flex
+    image: ghcr.io/jctopping/stunnel-flex:latest
+    restart: always
+    volumes:
+      - ./stunnel.pem:/etc/stunnel/stunnel.pem
+    ports:
+      - "8443:8443"
+    environment:
+      STUNNEL_ACCEPT: 8443
+      STUNNEL_DEST_HOST: host.docker.internal
+      STUNNEL_DEST_PORT: 22
+      STUNNEL_SERVICE: ssh
+      STUNNEL_DEBUG: 7
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

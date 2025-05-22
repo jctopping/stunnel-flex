@@ -1,0 +1,10 @@
+# Build output
+dist/
+*.pem
+*.sha1
+
+# OS/editor files
+.DS_Store
+.vscode/
+*.log
+*.swp
